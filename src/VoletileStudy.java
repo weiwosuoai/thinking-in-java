@@ -4,7 +4,10 @@
  */
 public class VoletileStudy {
 
-	public volatile static int count = 0;
+	public static double count = 0.0;
+
+	// Note: volatile 无法修饰 final 类型的变量
+	//public static volatile final Integer num;
 
 	public static void inc() {
 		count++;
