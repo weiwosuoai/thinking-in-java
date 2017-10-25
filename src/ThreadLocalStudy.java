@@ -7,7 +7,7 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class ThreadLocalStudy {
 
-	private static ThreadLocal<Integer> totalMoney = new ThreadLocal<Integer>(){
+	private static ThreadLocal<Integer> totalMoney = new ThreadLocal<Integer>() {
 		@Override
 		protected Integer initialValue() {
 			return 101;
@@ -21,24 +21,27 @@ public class ThreadLocalStudy {
 
 	/**
 	 * Save the money
+	 *
 	 * @param money
 	 */
 	public static void put(int money) {
 		totalMoney.set(totalMoney.get() + money);
-			System.out.println(System.currentTimeMillis() + " - put : " + money);
+		System.out.println(System.currentTimeMillis() + " - put : " + money);
 	}
 
 	/**
 	 * Get the money
+	 *
 	 * @param money
 	 */
 	public static void get(int money) {
-			totalMoney.set(totalMoney.get() - money);
-			System.out.println(System.currentTimeMillis() + " - get : " + money);
+		totalMoney.set(totalMoney.get() - money);
+		System.out.println(System.currentTimeMillis() + " - get : " + money);
 	}
 
 	/**
 	 * Test
+	 *
 	 * @param args
 	 */
 	public static void main(String[] args) throws InterruptedException {
@@ -60,14 +63,10 @@ public class ThreadLocalStudy {
 			}).start();
 		}
 
-
 		Thread.sleep(3000);
 		printMoney();
 
 	}
-
-
-
 
 
 }
