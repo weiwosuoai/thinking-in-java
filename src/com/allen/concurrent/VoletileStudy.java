@@ -1,3 +1,5 @@
+package com.allen.concurrent;
+
 /**
  * 关于 voletile 的学习
  * Created by Allen on 2017/10/24.

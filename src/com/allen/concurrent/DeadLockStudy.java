@@ -1,3 +1,5 @@
+package com.allen.concurrent;
+
 /**
  * 死锁
  *
