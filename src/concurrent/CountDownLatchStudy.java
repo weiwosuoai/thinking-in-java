@@ -1,6 +1,6 @@
-package com.allen.concurrent;
+package concurrent;
 
-import java.util.concurrent.*;
+import java.util.concurrent.CountDownLatch;
 
 /**
  * 倒数计数器
